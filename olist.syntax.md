@@ -51,7 +51,3 @@ GROUP BY t.product_category_name_english
 HAVING total_sold >= 10
 ORDER BY avg_review_score DESC;
 ```
-
-ORDER BY total_price DESC
-LIMIT 10;
-```
