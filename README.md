@@ -50,6 +50,19 @@ finding ways to close the gap in other major cities.
 
 ![most_revenue_city](images/most_revenue_city.png)
 
+### Top 10 Cities that have the Most Customers
+
+Sao Paulo has by far the most customers with **15,540**, more than 
+double the second city Rio de Janeiro at **6,882**. Belo Horizonte 
+comes third with **2,773** followed by Brasilia and Curitiba.
+
+This aligns with the revenue finding earlier where Sao Paulo also 
+led by a significant margin. More customers naturally means more 
+orders and higher revenue, confirming that Sao Paulo is Olist's 
+most important market.
+
+![most_customer](images/most_customer.png)
+
 ### Top 10 Product Category Generates that Most Revenue
 
 Health and Beauty leads with **R$1,258,681** in total revenue, 
@@ -64,3 +77,35 @@ revenue drops significantly, with Furniture Decor at **R$729,763**
 being less than half of the top category.
 
 ![most_revenue_product](images/most_revenue_product.png)
+
+### Average Review Score for each Product
+
+To ensure reliability, only categories with at least 10 sales 
+are included in this analysis.
+
+Toys leads with the highest average review score at **4.50**, 
+followed by Garden Tools at **4.47** and Computers and Accessories 
+at **4.43**. These categories are clearly meeting customer expectations.
+
+On the lower end, Housewares sits at **3.55** and Bed, Bath and 
+Table at **3.75**, which are also the third and first highest 
+revenue generating categories respectively. This is worth noting 
+because despite generating strong revenue, customers are not 
+particularly impressed with these categories, suggesting there 
+is room to improve product quality or manage customer expectations 
+better.
+
+Health and Beauty, which leads in total revenue, has a decent 
+score of **4.16**, showing that it not only sells well but also 
+satisfies customers reasonably well.
+
+Cross referencing with the revenue analysis, most top revenue 
+categories also have decent review scores. However, Bed Bath 
+and Table stands out as a concern. It ranks third in revenue 
+at **R$1,036,989** but has the lowest average review score 
+among top categories at **3.75**, suggesting customers are 
+spending but not fully satisfied with what they receive.
+
+![review_score](images/review_score.png)
+
+
