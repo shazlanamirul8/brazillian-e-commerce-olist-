@@ -108,4 +108,50 @@ spending but not fully satisfied with what they receive.
 
 ![review_score](images/review_score.png)
 
+### Average Review Score according to Delivery Time
+
+To calculate delivery time, I used `DATEDIFF` to find the number 
+of days between the order purchase date and the actual delivery date.
+
+Surprisingly, orders delivered within 8 to 14 days received the 
+highest average review score at **4.42**, even higher than fast 
+deliveries under 7 days at **4.17**. This suggests that customers 
+are not necessarily expecting the fastest delivery. As long as it 
+arrives within a reasonable timeframe, they are satisfied.
+
+However, orders taking more than 21 days show a noticeable drop 
+in satisfaction at **3.14**, confirming that very long delivery 
+times do negatively impact the customer experience.
+
+![delivery_time](images/delivery_time.png)
+
+Looking at the extreme cases, the longest deliveries ranging from 
+39 to 64 days mostly received review scores of **1 and 2**. This 
+further confirms that excessively long delivery times are strongly 
+associated with dissatisfied customers, even if moderate delays 
+do not seem to bother them as much.
+
+![product_delivery](images/product_delivery.png)
+
+---
+
+## Data Cleaning
+
+This dataset was relatively clean with not much to fix. The main 
+issue was with the `olist_orders` table where the date columns 
+needed to be converted from text to DATETIME format.
+
+The conversion kept failing because some empty rows were not 
+truly blank. They contained hidden whitespace characters that 
+looked empty but were not recognised as empty by MySQL. I fixed 
+this by using `TRIM()` to strip the hidden spaces before converting 
+them to NULL, after which the data type conversion worked correctly.
+
+Below is the raw data of  `olist_orders`
+
+![data_cleaning1](images/data_cleaning1.png)
+
+Below is the updated data of `olist_orders`
+
+![data_cleaning2](images/data_cleaning2.png)
 
