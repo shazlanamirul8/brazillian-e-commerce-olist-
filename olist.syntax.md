@@ -36,7 +36,7 @@ JOIN product_category_name_translation t
 GROUP BY t.product_category_name_english
 ```
 
-### Average Review Score for each Product
+## Average Review Score for each Product
 
 ```sql
 SELECT t.product_category_name_english AS product_name, COUNT(i.product_id) AS total_sold, ROUND(AVG(r.review_score), 2) AS avg_review_score
@@ -52,7 +52,7 @@ HAVING total_sold >= 10
 ORDER BY avg_review_score DESC;
 ```
 
-### Average Review Score according to Delivery Time
+## Average Review Score according to Delivery Time
 
 ```sql
 SELECT 
@@ -83,6 +83,29 @@ WHERE o.order_delivered_customer_date IS NOT NULL
 ORDER BY delivery_days
 LIMIT 10
 ```
+
+## Sellers that Generate Most Revenue
+
+```sql
+SELECT s.seller_city, ROUND(SUM(i.price), 2) AS total_revenue
+FROM olist_sellers s 
+JOIN olist_order_items i 
+	ON s.seller_id = i.seller_id
+GROUP BY s.seller_city
+ORDER BY total_revenue DESC
+LIMIT 10;
+```
+
+## Most Popular Payment Method
+
+```sql
+SELECT payment_type, COUNT(payment_type) AS payment_method
+FROM olist_order_payments
+GROUP BY payment_type
+ORDER BY payment_method DESC;
+```
+
+---
 
 # Data Cleaning
 
