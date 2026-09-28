@@ -2,7 +2,22 @@
 Using MySQL to analyze Olist, a Brazilian e-commerce platform,  to understand sales performance, customer behavior, seller  performance and delivery trends across 8 interconnected tables  using JOINs, CTEs and window functions.
 
 ## Executive Summary
-To be updated
+
+This analysis explores Olist, a Brazilian e-commerce marketplace 
+that connects small businesses to customers across Brazil. Using 
+MySQL, I analyzed 8 interconnected tables covering orders, customers, 
+products, sellers, payments and reviews to understand what drives 
+revenue, customer satisfaction and delivery performance.
+
+Key findings show that Sao Paulo dominates both as a customer and 
+seller city, generating significantly more revenue than any other 
+city in Brazil. Health and Beauty leads product category revenue 
+while Toys and Garden Tools have the highest customer satisfaction 
+scores. Interestingly, normal delivery time of 8 to 14 days 
+received higher satisfaction scores than fast delivery, though 
+orders taking more than 21 days show a clear drop in satisfaction. 
+Credit card is the dominant payment method, though boleto remains 
+significant as a uniquely Brazilian payment option.
 
 ## Dataset Overview
 
@@ -132,6 +147,45 @@ associated with dissatisfied customers, even if moderate delays
 do not seem to bother them as much.
 
 ![product_delivery](images/product_delivery.png)
+
+### Sellers that Generate Most Revenue
+
+Sao Paulo dominates seller revenue at **R$2,702,878**, which is 
+more than four times the second highest city, Ibitinga at 
+**R$624,593**. This aligns with the customer analysis where Sao 
+Paulo also led in total spending, confirming that the city is 
+the heart of Olist's marketplace on both the buyer and seller side.
+
+Ibitinga at second place is interesting because it is a relatively 
+small city compared to the others in the top 10. It is actually 
+well known in Brazil for its textile and embroidery industry, which 
+likely explains its strong presence on an e-commerce platform.
+
+Curitiba and Rio de Janeiro round out the top three among major 
+cities, while the remaining cities all fall between **R$225,000** 
+and **R$330,000**.
+
+![seller_revenue](images/seller_revenue.png)
+
+### Most Popular Payment Method
+
+Credit card is by far the most popular payment method with **76,795** 
+transactions, making up the majority of all payments on the platform. 
+Boleto, which is a Brazilian bank payment slip, comes second with 
+**19,784** transactions. Voucher and debit card follow with **5,775** 
+and **1,529** respectively.
+
+The dominance of credit card is not surprising for an e-commerce 
+platform. However, the strong presence of boleto is interesting 
+since it is a uniquely Brazilian payment method that allows customers 
+to pay without a bank card. This shows that Olist needs to maintain 
+both digital and traditional payment options to serve its diverse 
+customer base.
+
+There are also **3** transactions marked as not defined, which is 
+negligible and likely a data entry issue.
+
+![payment_method](images/payment_method.png)
 
 ---
 
